@@ -23,7 +23,7 @@ ethernet LAN. The vblade program (storage target) exports a block
 device using AoE.
 
 %description -l pl
-aoetools to programy dla u¿ywajacych protoko³u sieciowego
+aoetools to programy dla u¿ywaj±cych protoko³u sieciowego
 sk³adowania danych ATA over Ethernet (AoE) - prostego protoko³u do
 przechowywania danych za po¶rednictwem lokalnej sieci ethernetowej.
 Program vblade (obiekt sk³adowania) eksportuje urz±dzenie blokowe przy
