@@ -41,6 +41,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sbindir}/aoe-discover
 %attr(755,root,root) %{_sbindir}/aoe-interfaces
 %attr(755,root,root) %{_sbindir}/aoe-stat
+%attr(755,root,root) %{_sbindir}/aoe-mkdevs
+%attr(755,root,root) %{_sbindir}/aoe-mkshelf
 %{_mandir}/man?/aoe-discover*
 %{_mandir}/man?/aoe-interfaces*
 %{_mandir}/man?/aoe-stat*
+%{_mandir}/man8/aoe-mkdevs*
+%{_mandir}/man8/aoe-mkshelf*
