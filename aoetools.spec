@@ -55,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/aoe-stat.8*
 %{_mandir}/man8/aoe-mkdevs.8*
 %{_mandir}/man8/aoe-mkshelf.8*
-%{_mandir}/man8/aoeping.8.gz
+%{_mandir}/man8/aoeping.8*
