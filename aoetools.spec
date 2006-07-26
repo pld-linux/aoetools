@@ -12,7 +12,7 @@ License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
 # Source0-md5:	92412c457f2926c23ac6ca8f38b72fe8
-URL:		http://aoetools.sf.net/
+URL:		http://aoetools.sourceforge.net/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,11 +23,10 @@ ethernet LAN. The vblade program (storage target) exports a block
 device using AoE.
 
 %description -l pl
-aoetools to programy dla u¿ywaj±cych protoko³u sieciowego
-sk³adowania danych ATA over Ethernet (AoE) - prostego protoko³u do
-przechowywania danych za po¶rednictwem lokalnej sieci ethernetowej.
-Program vblade (obiekt sk³adowania) eksportuje urz±dzenie blokowe przy
-u¿yciu AoE.
+aoetools to programy dla u¿ywaj±cych protoko³u sieciowego sk³adowania
+danych ATA over Ethernet (AoE) - prostego protoko³u do przechowywania
+danych za po¶rednictwem lokalnej sieci ethernetowej. Program vblade
+(obiekt sk³adowania) eksportuje urz±dzenie blokowe przy u¿yciu AoE.
 
 %prep
 %setup -q
