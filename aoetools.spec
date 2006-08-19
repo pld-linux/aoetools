@@ -1,7 +1,3 @@
-#
-# TODO:
-#		- add devices to static-dev
-#
 Summary:	AoE tools - programs for users of ATA over Ethernet
 Summary(pl):	Narzêdzia AoE - programy dla u¿ywaj±cych ATA over Ethernet
 Name:		aoetools
