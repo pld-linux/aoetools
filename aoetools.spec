@@ -1,12 +1,12 @@
 Summary:	AoE tools - programs for users of ATA over Ethernet
 Summary(pl):	Narzêdzia AoE - programy dla u¿ywaj±cych ATA over Ethernet
 Name:		aoetools
-Version:	10
+Version:	11
 Release:	0.1
 License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
-# Source0-md5:	af89514d4abf5dd18d116dccea13a6fc
+# Source0-md5:	6dcae199043f273c38d053833cae5525
 URL:		http://aoetools.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,6 +25,11 @@ danych za po¶rednictwem lokalnej sieci ethernetowej. Program vblade
 %prep
 %setup -q
 
+%build
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -Wall"
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -36,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS README
+%doc NEWS README TODO
 %attr(755,root,root) %{_sbindir}/aoe-discover
 %attr(755,root,root) %{_sbindir}/aoe-interfaces
 %attr(755,root,root) %{_sbindir}/aoe-stat
