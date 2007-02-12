@@ -1,5 +1,5 @@
 Summary:	AoE tools - programs for users of ATA over Ethernet
-Summary(pl.UTF-8):   Narzędzia AoE - programy dla używających ATA over Ethernet
+Summary(pl.UTF-8):	Narzędzia AoE - programy dla używających ATA over Ethernet
 Name:		aoetools
 Version:	12
 Release:	0.1
