@@ -1,5 +1,5 @@
 Summary:	AoE tools - programs for users of ATA over Ethernet
-Summary(pl):	NarzÍdzia AoE - programy dla uøywaj±cych ATA over Ethernet
+Summary(pl.UTF-8):   Narzƒôdzia AoE - programy dla u≈ºywajƒÖcych ATA over Ethernet
 Name:		aoetools
 Version:	12
 Release:	0.1
@@ -16,11 +16,11 @@ network storage protocol, a simple protocol for using storage over an
 ethernet LAN. The vblade program (storage target) exports a block
 device using AoE.
 
-%description -l pl
-aoetools to programy dla uøywaj±cych protoko≥u sieciowego sk≥adowania
-danych ATA over Ethernet (AoE) - prostego protoko≥u do przechowywania
-danych za po∂rednictwem lokalnej sieci ethernetowej. Program vblade
-(obiekt sk≥adowania) eksportuje urz±dzenie blokowe przy uøyciu AoE.
+%description -l pl.UTF-8
+aoetools to programy dla u≈ºywajƒÖcych protoko≈Çu sieciowego sk≈Çadowania
+danych ATA over Ethernet (AoE) - prostego protoko≈Çu do przechowywania
+danych za po≈õrednictwem lokalnej sieci ethernetowej. Program vblade
+(obiekt sk≈Çadowania) eksportuje urzƒÖdzenie blokowe przy u≈ºyciu AoE.
 
 %prep
 %setup -q
