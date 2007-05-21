@@ -1,12 +1,12 @@
 Summary:	AoE tools - programs for users of ATA over Ethernet
 Summary(pl.UTF-8):	Narzędzia AoE - programy dla używających ATA over Ethernet
 Name:		aoetools
-Version:	14
+Version:	15
 Release:	0.1
 License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
-# Source0-md5:	592f9f031796b4f0b90166a8cd5f9e30
+# Source0-md5:	02f0b0651f09f11fc8e34b9f3d969dec
 URL:		http://aoetools.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
