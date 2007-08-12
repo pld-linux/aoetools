@@ -1,12 +1,12 @@
 Summary:	AoE tools - programs for users of ATA over Ethernet
 Summary(pl.UTF-8):	Narzędzia AoE - programy dla używających ATA over Ethernet
 Name:		aoetools
-Version:	16
+Version:	18
 Release:	0.1
 License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
-# Source0-md5:	15742876cb21c2b1196cd6772f401e81
+# Source0-md5:	42007880b08a3672da348fa507943f61
 URL:		http://aoetools.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,6 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sbindir}/aoe-mkdevs
 %attr(755,root,root) %{_sbindir}/aoe-mkshelf
 %attr(755,root,root) %{_sbindir}/aoe-revalidate
+%attr(755,root,root) %{_sbindir}/aoe-version
 %attr(755,root,root) %{_sbindir}/aoeping
 %{_mandir}/man8/aoe-discover.8*
 %{_mandir}/man8/aoe-flush.8*
@@ -57,4 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/aoe-mkdevs.8*
 %{_mandir}/man8/aoe-mkshelf.8*
 %{_mandir}/man8/aoe-revalidate.8*
+%{_mandir}/man8/aoe-version.8*
 %{_mandir}/man8/aoeping.8*
