@@ -1,12 +1,12 @@
 Summary:	AoE tools - programs for users of ATA over Ethernet
 Summary(pl.UTF-8):	Narzędzia AoE - programy dla używających ATA over Ethernet
 Name:		aoetools
-Version:	19
+Version:	21
 Release:	0.1
 License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
-# Source0-md5:	5c3246e355af2f53eada530f23d414b9
+# Source0-md5:	cbc3cc185d50f6c867f034fc61a137fa
 URL:		http://aoetools.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS README TODO
+%doc NEWS README TODO devnodes.txt
 %attr(755,root,root) %{_sbindir}/aoe-discover
 %attr(755,root,root) %{_sbindir}/aoe-flush
 %attr(755,root,root) %{_sbindir}/aoe-interfaces
@@ -50,6 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sbindir}/aoe-mkshelf
 %attr(755,root,root) %{_sbindir}/aoe-revalidate
 %attr(755,root,root) %{_sbindir}/aoe-version
+%attr(755,root,root) %{_sbindir}/aoecfg
 %attr(755,root,root) %{_sbindir}/aoeping
 %{_mandir}/man8/aoe-discover.8*
 %{_mandir}/man8/aoe-flush.8*
@@ -59,4 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/aoe-mkshelf.8*
 %{_mandir}/man8/aoe-revalidate.8*
 %{_mandir}/man8/aoe-version.8*
+%{_mandir}/man8/aoecfg.8*
 %{_mandir}/man8/aoeping.8*
