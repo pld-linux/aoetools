@@ -2,7 +2,7 @@ Summary:	AoE tools - programs for users of ATA over Ethernet
 Summary(pl.UTF-8):	Narzędzia AoE - programy dla używających ATA over Ethernet
 Name:		aoetools
 Version:	30
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://downloads.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
@@ -32,7 +32,7 @@ Requires:	udev-core
 udev rules for AoE kernel modules.
 
 %description udev -l pl.UTF-8
-Reguły udev dla modułów jądra Linuksa dla Aoe.
+Reguły udev dla modułów jądra Linuksa dla AoE.
 
 %prep
 %setup -q
