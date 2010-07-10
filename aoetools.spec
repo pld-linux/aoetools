@@ -5,7 +5,7 @@ Version:	30
 Release:	1
 License:	GPL v2
 Group:		Base/Utilities
-Source0:	http://dl.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
 # Source0-md5:	b87eeb34d50921cdf852780f662630b9
 URL:		http://aoetools.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,8 +22,30 @@ danych ATA over Ethernet (AoE) - prostego protokołu do przechowywania
 danych za pośrednictwem lokalnej sieci ethernetowej. Program vblade
 (obiekt składowania) eksportuje urządzenie blokowe przy użyciu AoE.
 
+%package udev
+Summary:	udev rules for AoE kernel modules
+Summary(pl.UTF-8):	Reguły udev dla modułów jądra Linuksa dla AoE
+Group:		Base/Kernel
+Requires:	udev-core
+
+%description udev
+udev rules for AoE kernel modules.
+
+%description udev -l pl.UTF-8
+Reguły udev dla modułów jądra Linuksa dla Aoe.
+
 %prep
 %setup -q
+
+cat << 'EOF' > udev.conf
+# aoe char devices
+SUBSYSTEM=="aoe", KERNEL=="discover", NAME="etherd/%k", GROUP="disk", MODE="0220"
+SUBSYSTEM=="aoe", KERNEL=="err", NAME="etherd/%k", GROUP="disk", MODE="0440"
+SUBSYSTEM=="aoe", KERNEL=="interfaces", NAME="etherd/%k", GROUP="disk", MODE="0220"
+SUBSYSTEM=="aoe", KERNEL=="revalidate", NAME="etherd/%k", GROUP="disk", MODE="0220"
+# aoe block devices
+KERNEL=="etherd*", NAME="%k", GROUP="disk"
+EOF
 
 %build
 %{__make} \
@@ -35,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	PREFIX=$RPM_BUILD_ROOT
+
+install -D udev.conf $RPM_BUILD_ROOT/etc/udev/rules.d/60-aoe.rules
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,3 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/aoecfg.8*
 %{_mandir}/man8/aoeping.8*
 %{_mandir}/man8/coraid-update.8*
+
+%files udev
+%defattr(644,root,root,755)
+%config(noreplace) %verify(not md5 mtime size) /etc/udev/rules.d/60-aoe.rules
