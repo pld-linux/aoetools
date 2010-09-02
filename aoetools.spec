@@ -1,12 +1,12 @@
 Summary:	AoE tools - programs for users of ATA over Ethernet
 Summary(pl.UTF-8):	Narzędzia AoE - programy dla używających ATA over Ethernet
 Name:		aoetools
-Version:	30
-Release:	2
+Version:	31
+Release:	1
 License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://downloads.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
-# Source0-md5:	b87eeb34d50921cdf852780f662630b9
+# Source0-md5:	2fc9f7f176a9a713de999b0af472c658
 URL:		http://aoetools.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -73,6 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sbindir}/aoe-mkdevs
 %attr(755,root,root) %{_sbindir}/aoe-mkshelf
 %attr(755,root,root) %{_sbindir}/aoe-revalidate
+%attr(755,root,root) %{_sbindir}/aoe-sancheck
 %attr(755,root,root) %{_sbindir}/aoe-version
 %attr(755,root,root) %{_sbindir}/aoecfg
 %attr(755,root,root) %{_sbindir}/aoeping
@@ -84,6 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/aoe-mkdevs.8*
 %{_mandir}/man8/aoe-mkshelf.8*
 %{_mandir}/man8/aoe-revalidate.8*
+%{_mandir}/man8/aoe-sancheck.8*
 %{_mandir}/man8/aoe-version.8*
 %{_mandir}/man8/aoecfg.8*
 %{_mandir}/man8/aoeping.8*
